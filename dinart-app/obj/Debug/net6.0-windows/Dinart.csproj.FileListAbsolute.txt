@@ -15,3 +15,5 @@ C:\Users\User1\Desktop\Dinart GIT\dinart\dinart-app\obj\Debug\net6.0-windows\Din
 C:\Users\User1\Desktop\Dinart GIT\dinart\dinart-app\obj\Debug\net6.0-windows\ref\Dinart.dll
 C:\Users\User1\Desktop\Dinart GIT\dinart\dinart-app\obj\Debug\net6.0-windows\Dinart.pdb
 C:\Users\User1\Desktop\Dinart GIT\dinart\dinart-app\obj\Debug\net6.0-windows\Dinart.genruntimeconfig.cache
+C:\Users\User1\Desktop\Dinart GIT\dinart\dinart-app\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
+C:\Users\User1\Desktop\Dinart GIT\dinart\dinart-app\obj\Debug\net6.0-windows\Dinart.csproj.CopyComplete

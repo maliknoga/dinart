@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/SjD6HCexZrl0DV9Je1jxLl5Nxc+9Fnw/OuwJd9R5wiXC/GfKvmkZvInjiuUrHWBwq+Wg9EQJFrfdkAUJaGJqw==",
+  "dgSpecHash": "T3NYGIQQc1H19xMVikI/uljPBx42GgsdqA/EfUJ8CfSBDWc1iR/qj/OrvND5S39btpz1CeUgit5z2YXITRH69Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\User1\\Desktop\\Dinart GIT\\dinart\\dinart-app\\Dinart.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User1\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512"
+  ],
   "logs": []
 }
