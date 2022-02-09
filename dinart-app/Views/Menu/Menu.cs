@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace Dinart
 {
     public partial class Menu : Form
     {

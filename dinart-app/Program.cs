@@ -1,4 +1,4 @@
-namespace WinFormsApp1
+namespace Dinart
 {
     internal static class Program
     {

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User1\\Desktop\\Dinart v2\\WinFormsApp1\\Dinart.csproj",
+      "projectUniqueName": "C:\\Users\\User1\\Desktop\\Dinart GIT\\dinart\\dinart-app\\Dinart.csproj",
       "projectName": "Dinart",
-      "projectPath": "C:\\Users\\User1\\Desktop\\Dinart v2\\WinFormsApp1\\Dinart.csproj",
+      "projectPath": "C:\\Users\\User1\\Desktop\\Dinart GIT\\dinart\\dinart-app\\Dinart.csproj",
       "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User1\\Desktop\\Dinart v2\\WinFormsApp1\\obj\\",
+      "outputPath": "C:\\Users\\User1\\Desktop\\Dinart GIT\\dinart\\dinart-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
