@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "t1IdFwzVPRaUhQ1mMg5rjOE7pvi1eKP3nwVbI+ghRVkc5/rz6TnT2duyy959vjkgW3VHeQzfTIWwTPpt4kthKg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User1\\Desktop\\Dinart GIT\\dinart\\DinartApp\\DinartApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User1\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512"
+  ],
+  "logs": []
+}
