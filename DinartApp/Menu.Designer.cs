@@ -29,29 +29,134 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.RecapVentesButton = new FontAwesome.Sharp.IconButton();
+            this.CommandesButton = new FontAwesome.Sharp.IconButton();
+            this.ComptesButton = new FontAwesome.Sharp.IconButton();
+            this.ChiffresVentesButton = new FontAwesome.Sharp.IconButton();
+            this.InventaireButton = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(84)))));
-            this.panelMenu.Controls.Add(this.iconButton5);
-            this.panelMenu.Controls.Add(this.iconButton4);
-            this.panelMenu.Controls.Add(this.iconButton3);
-            this.panelMenu.Controls.Add(this.iconButton2);
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.RecapVentesButton);
+            this.panelMenu.Controls.Add(this.CommandesButton);
+            this.panelMenu.Controls.Add(this.ComptesButton);
+            this.panelMenu.Controls.Add(this.ChiffresVentesButton);
+            this.panelMenu.Controls.Add(this.InventaireButton);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 450);
             this.panelMenu.TabIndex = 0;
+            // 
+            // RecapVentesButton
+            // 
+            this.RecapVentesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RecapVentesButton.FlatAppearance.BorderSize = 0;
+            this.RecapVentesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RecapVentesButton.ForeColor = System.Drawing.Color.White;
+            this.RecapVentesButton.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            this.RecapVentesButton.IconColor = System.Drawing.Color.White;
+            this.RecapVentesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.RecapVentesButton.IconSize = 32;
+            this.RecapVentesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RecapVentesButton.Location = new System.Drawing.Point(0, 380);
+            this.RecapVentesButton.Name = "RecapVentesButton";
+            this.RecapVentesButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.RecapVentesButton.Size = new System.Drawing.Size(220, 60);
+            this.RecapVentesButton.TabIndex = 4;
+            this.RecapVentesButton.Text = "Récap Ventes";
+            this.RecapVentesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RecapVentesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.RecapVentesButton.UseVisualStyleBackColor = true;
+            // 
+            // CommandesButton
+            // 
+            this.CommandesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CommandesButton.FlatAppearance.BorderSize = 0;
+            this.CommandesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CommandesButton.ForeColor = System.Drawing.Color.White;
+            this.CommandesButton.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
+            this.CommandesButton.IconColor = System.Drawing.Color.White;
+            this.CommandesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.CommandesButton.IconSize = 32;
+            this.CommandesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CommandesButton.Location = new System.Drawing.Point(0, 320);
+            this.CommandesButton.Name = "CommandesButton";
+            this.CommandesButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.CommandesButton.Size = new System.Drawing.Size(220, 60);
+            this.CommandesButton.TabIndex = 3;
+            this.CommandesButton.Text = "Commandes";
+            this.CommandesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CommandesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CommandesButton.UseVisualStyleBackColor = true;
+            // 
+            // ComptesButton
+            // 
+            this.ComptesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ComptesButton.FlatAppearance.BorderSize = 0;
+            this.ComptesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComptesButton.ForeColor = System.Drawing.Color.White;
+            this.ComptesButton.IconChar = FontAwesome.Sharp.IconChar.CreditCard;
+            this.ComptesButton.IconColor = System.Drawing.Color.White;
+            this.ComptesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ComptesButton.IconSize = 32;
+            this.ComptesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ComptesButton.Location = new System.Drawing.Point(0, 260);
+            this.ComptesButton.Name = "ComptesButton";
+            this.ComptesButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ComptesButton.Size = new System.Drawing.Size(220, 60);
+            this.ComptesButton.TabIndex = 2;
+            this.ComptesButton.Text = "Comptes";
+            this.ComptesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ComptesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ComptesButton.UseVisualStyleBackColor = true;
+            // 
+            // ChiffresVentesButton
+            // 
+            this.ChiffresVentesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ChiffresVentesButton.FlatAppearance.BorderSize = 0;
+            this.ChiffresVentesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChiffresVentesButton.ForeColor = System.Drawing.Color.White;
+            this.ChiffresVentesButton.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
+            this.ChiffresVentesButton.IconColor = System.Drawing.Color.White;
+            this.ChiffresVentesButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ChiffresVentesButton.IconSize = 32;
+            this.ChiffresVentesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChiffresVentesButton.Location = new System.Drawing.Point(0, 200);
+            this.ChiffresVentesButton.Name = "ChiffresVentesButton";
+            this.ChiffresVentesButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.ChiffresVentesButton.Size = new System.Drawing.Size(220, 60);
+            this.ChiffresVentesButton.TabIndex = 1;
+            this.ChiffresVentesButton.Text = "Chiffres Ventes";
+            this.ChiffresVentesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ChiffresVentesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ChiffresVentesButton.UseVisualStyleBackColor = true;
+            // 
+            // InventaireButton
+            // 
+            this.InventaireButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.InventaireButton.FlatAppearance.BorderSize = 0;
+            this.InventaireButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InventaireButton.ForeColor = System.Drawing.Color.White;
+            this.InventaireButton.IconChar = FontAwesome.Sharp.IconChar.Boxes;
+            this.InventaireButton.IconColor = System.Drawing.Color.White;
+            this.InventaireButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.InventaireButton.IconSize = 32;
+            this.InventaireButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InventaireButton.Location = new System.Drawing.Point(0, 140);
+            this.InventaireButton.Name = "InventaireButton";
+            this.InventaireButton.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.InventaireButton.Size = new System.Drawing.Size(220, 60);
+            this.InventaireButton.TabIndex = 0;
+            this.InventaireButton.Text = "Inventaire";
+            this.InventaireButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.InventaireButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.InventaireButton.UseVisualStyleBackColor = true;
             // 
             // panelLogo
             // 
@@ -60,106 +165,6 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 140);
             this.panelLogo.TabIndex = 0;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 140);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(220, 60);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "iconButton1";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(0, 200);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(220, 60);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "iconButton2";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(0, 260);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(220, 60);
-            this.iconButton3.TabIndex = 2;
-            this.iconButton3.Text = "iconButton3";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 32;
-            this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(0, 320);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(220, 60);
-            this.iconButton4.TabIndex = 3;
-            this.iconButton4.Text = "iconButton4";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            // 
-            // iconButton5
-            // 
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Boxes;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 32;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(0, 380);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(220, 60);
-            this.iconButton5.TabIndex = 4;
-            this.iconButton5.Text = "iconButton5";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
@@ -177,11 +182,11 @@
         #endregion
 
         private Panel panelMenu;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton RecapVentesButton;
+        private FontAwesome.Sharp.IconButton CommandesButton;
+        private FontAwesome.Sharp.IconButton ComptesButton;
+        private FontAwesome.Sharp.IconButton ChiffresVentesButton;
+        private FontAwesome.Sharp.IconButton InventaireButton;
         private Panel panelLogo;
     }
 }
