@@ -5,7 +5,6 @@ C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\bin\Debug\net6.0-windows\Dina
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\bin\Debug\net6.0-windows\ref\DinartApp.dll
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\bin\Debug\net6.0-windows\DinartApp.pdb
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\bin\Debug\net6.0-windows\FontAwesome.Sharp.dll
-C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.csproj.AssemblyReference.cache
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.Menu.resources
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.csproj.GenerateResource.cache
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.GeneratedMSBuildEditorConfig.editorconfig

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.RecapVentesButton = new FontAwesome.Sharp.IconButton();
             this.CommandesButton = new FontAwesome.Sharp.IconButton();
@@ -35,7 +36,15 @@
             this.ChiffresVentesButton = new FontAwesome.Sharp.IconButton();
             this.InventaireButton = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.labelTitleChildForm = new System.Windows.Forms.Label();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -73,6 +82,7 @@
             this.RecapVentesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RecapVentesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RecapVentesButton.UseVisualStyleBackColor = true;
+            this.RecapVentesButton.Click += new System.EventHandler(this.RecapVentesButton_Click);
             // 
             // CommandesButton
             // 
@@ -94,6 +104,7 @@
             this.CommandesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CommandesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CommandesButton.UseVisualStyleBackColor = true;
+            this.CommandesButton.Click += new System.EventHandler(this.CommandesButton_Click);
             // 
             // ComptesButton
             // 
@@ -115,6 +126,7 @@
             this.ComptesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ComptesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ComptesButton.UseVisualStyleBackColor = true;
+            this.ComptesButton.Click += new System.EventHandler(this.ComptesButton_Click);
             // 
             // ChiffresVentesButton
             // 
@@ -136,6 +148,7 @@
             this.ChiffresVentesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ChiffresVentesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ChiffresVentesButton.UseVisualStyleBackColor = true;
+            this.ChiffresVentesButton.Click += new System.EventHandler(this.ChiffresVentesButton_Click);
             // 
             // InventaireButton
             // 
@@ -157,24 +170,78 @@
             this.InventaireButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.InventaireButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.InventaireButton.UseVisualStyleBackColor = true;
+            this.InventaireButton.Click += new System.EventHandler(this.InventaireButton_Click);
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 140);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(34, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 78);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(84)))));
+            this.panelTitleBar.Controls.Add(this.labelTitleChildForm);
+            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(580, 75);
+            this.panelTitleBar.TabIndex = 2;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // labelTitleChildForm
+            // 
+            this.labelTitleChildForm.AutoSize = true;
+            this.labelTitleChildForm.ForeColor = System.Drawing.Color.White;
+            this.labelTitleChildForm.Location = new System.Drawing.Point(58, 38);
+            this.labelTitleChildForm.Name = "labelTitleChildForm";
+            this.labelTitleChildForm.Size = new System.Drawing.Size(46, 15);
+            this.labelTitleChildForm.TabIndex = 1;
+            this.labelTitleChildForm.Text = "Accueil";
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(17)))), ((int)(((byte)(84)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(20, 30);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
+            this.iconCurrentChildForm.TabIndex = 0;
+            this.iconCurrentChildForm.TabStop = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Name = "Menu";
             this.Text = "Dinart";
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +255,9 @@
         private FontAwesome.Sharp.IconButton ChiffresVentesButton;
         private FontAwesome.Sharp.IconButton InventaireButton;
         private Panel panelLogo;
+        private PictureBox pictureBox1;
+        private Panel panelTitleBar;
+        private Label labelTitleChildForm;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
     }
 }
