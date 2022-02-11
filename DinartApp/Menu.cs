@@ -9,6 +9,7 @@ namespace DinartApp
         //Champs
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form currentChildForm;
 
         //Constructeur
         public Menu()
@@ -18,7 +19,7 @@ namespace DinartApp
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
-            //Form
+            //Form (éléments ajouter sur une fenêtre à taille modifiable)
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
@@ -73,33 +74,57 @@ namespace DinartApp
             }
         }
 
+        private void OpenChildForm(Form childForm)
+        {
+            if(currentChildForm != null)
+            {
+                // Ouvre une seule form
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Add(childForm);
+            panelDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            labelTitleChildForm.Text = childForm.Text;
+        }
+
         private void InventaireButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            // OpenChildForm(new InventaireForm());
         }
 
         private void ChiffresVentesButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            // OpenChildForm(new ChiffresVentesForm());
         }
 
         private void ComptesButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            // OpenChildForm(new ComptesForm());
         }
 
         private void CommandesButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            // OpenChildForm(new CommandesForm());
         }
 
         private void RecapVentesButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            // OpenChildForm(new RecapVentesForm());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            // currentChildForm.Close();
             Reset();
         }
 

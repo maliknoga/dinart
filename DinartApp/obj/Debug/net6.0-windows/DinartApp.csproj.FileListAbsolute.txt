@@ -16,3 +16,4 @@ C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\Dina
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\ref\DinartApp.dll
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.pdb
 C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.genruntimeconfig.cache
+C:\Users\User1\Desktop\Dinart GIT\dinart\DinartApp\obj\Debug\net6.0-windows\DinartApp.csproj.AssemblyReference.cache
