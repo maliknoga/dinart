@@ -92,6 +92,17 @@ namespace DinartApp
             labelTitleChildForm.Text = childForm.Text;
         }
 
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.MediumPurple;
+            labelTitleChildForm.Text = "Home";
+        }
+
+        // Events
+            // Boutons Menu
         private void InventaireButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
@@ -128,14 +139,6 @@ namespace DinartApp
             Reset();
         }
 
-        private void Reset()
-        {
-            DisableButton();
-            leftBorderBtn.Visible = false;
-            iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = Color.MediumPurple;
-            labelTitleChildForm.Text = "Home";
-        }
 
         // Fenêtre mobile
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -147,6 +150,37 @@ namespace DinartApp
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        // Fermer - Agrandir - Réduire
+        private void iconClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconMaximize_Click(object sender, EventArgs e)
+        {
+            if(WindowState == FormWindowState.Normal)
+                WindowState= FormWindowState.Maximized;
+            else
+                WindowState= FormWindowState.Normal;
+
+            FormMainMenu_Resize(sender, e);
+        }
+
+        private void iconMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+            FormMainMenu_Resize(sender, e);
+        }
+
+        //Remove transparent border in maximized state
+        private void FormMainMenu_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+                FormBorderStyle = FormBorderStyle.None;
+            else
+                FormBorderStyle = FormBorderStyle.Sizable;
         }
     }
 }
