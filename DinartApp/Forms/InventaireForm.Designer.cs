@@ -47,6 +47,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvInventaire.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvInventaire.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventaire.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventaire.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventaire.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
