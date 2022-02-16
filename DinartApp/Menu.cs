@@ -1,5 +1,6 @@
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using DinartApp.Forms;
 using FontAwesome.Sharp;
 
 namespace DinartApp
@@ -106,7 +107,7 @@ namespace DinartApp
         private void InventaireButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
-            // OpenChildForm(new InventaireForm());
+            OpenChildForm(new InventaireForm());
         }
 
         private void ChiffresVentesButton_Click(object sender, EventArgs e)

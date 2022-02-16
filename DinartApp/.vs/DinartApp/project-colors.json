@@ -5,6 +5,11 @@
       "ProjectGuid": "5951e445-7774-4d57-886a-b0701c5df7bc",
       "DisplayName": "DinartApp",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1
