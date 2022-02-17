@@ -88,10 +88,21 @@ namespace DinartApp.Forms
             if (ourGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
                 OpenExcelFile(); // peut être retirer plus tard si déplacement CloseExcelFile()
-                this.xlRange.Cells[e.RowIndex/* potentiellement + 4*/, 1].Value 
-                    = dgvInventaire.Rows[e.RowIndex].Cells[0].Value;
-                this.xlRange.Cells[e.RowIndex/* potentiellement + 4*/, 2].Value 
-                    = dgvInventaire.Rows[e.RowIndex].Cells[1].Value;
+                try
+                {
+                    //MessageBox.Show(Convert.ToString(this.xlRange.Cells[(e.RowIndex + 4), 1].Value));
+                    //MessageBox.Show(Convert.ToString(dgvInventaire.Rows[e.RowIndex].Cells[0].Value));
+
+                    this.xlRange.Cells[e.RowIndex + 4, 1].Value
+                        = dgvInventaire.Rows[e.RowIndex].Cells[0].Value;
+                    this.xlRange.Cells[e.RowIndex + 4, 2].Value
+                        = dgvInventaire.Rows[e.RowIndex].Cells[1].Value;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erreur : " + ex.Message);
+                }
+                
                 CloseExcelFile(); // peut être retirer plus tard si déplacement CloseExcelFile()
             }
         }
@@ -124,6 +135,7 @@ namespace DinartApp.Forms
             System.Runtime.InteropServices.Marshal.ReleaseComObject(this.xlApp);
             System.Runtime.InteropServices.Marshal.ReleaseComObject(this.xlWorkbook);
             System.Runtime.InteropServices.Marshal.ReleaseComObject(this.xlWorksheet);
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(this.xlRange);
         }
 
     }
