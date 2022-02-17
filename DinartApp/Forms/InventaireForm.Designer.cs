@@ -48,8 +48,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(43)))), ((int)(((byte)(97)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvInventaire.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInventaire.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventaire.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventaire.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventaire.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -75,8 +73,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInventaire.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvInventaire.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInventaire.EnableHeadersVisualStyles = false;
-            this.dgvInventaire.Location = new System.Drawing.Point(12, 34);
+            this.dgvInventaire.Location = new System.Drawing.Point(0, 0);
             this.dgvInventaire.Name = "dgvInventaire";
             this.dgvInventaire.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -89,9 +88,10 @@
             this.dgvInventaire.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInventaire.RowTemplate.Height = 50;
             this.dgvInventaire.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventaire.Size = new System.Drawing.Size(556, 181);
+            this.dgvInventaire.Size = new System.Drawing.Size(580, 366);
             this.dgvInventaire.TabIndex = 0;
             this.dgvInventaire.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventaire_CellContentClick);
+            this.dgvInventaire.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvInventaire_RowsRemoved);
             // 
             // Nom
             // 
