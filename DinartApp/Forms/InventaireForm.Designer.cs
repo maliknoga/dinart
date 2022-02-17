@@ -35,6 +35,7 @@
             this.dgvInventaire = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSave = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,8 @@
             this.dgvInventaire.ColumnHeadersHeight = 50;
             this.dgvInventaire.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nom,
-            this.Nombre});
+            this.Nombre,
+            this.btnSave});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -89,6 +91,7 @@
             this.dgvInventaire.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventaire.Size = new System.Drawing.Size(556, 181);
             this.dgvInventaire.TabIndex = 0;
+            this.dgvInventaire.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventaire_CellContentClick);
             // 
             // Nom
             // 
@@ -99,6 +102,13 @@
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            // 
+            // btnSave
+            // 
+            this.btnSave.HeaderText = "";
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Text = "Enregistrer";
+            this.btnSave.UseColumnTextForButtonValue = true;
             // 
             // InventaireForm
             // 
@@ -120,5 +130,6 @@
         private DataGridView dgvInventaire;
         private DataGridViewTextBoxColumn Nom;
         private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewButtonColumn btnSave;
     }
 }
