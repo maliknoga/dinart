@@ -27,33 +27,45 @@ namespace DinartApp.Forms
         //private int xlCol;
         private string strFilePath;
 
+        // champs précis pour globalité
+        private string myFileName = "Inventaire_20_12_2021.xlsx";
+        private string MyWsName = "Print";
+        private string MyRange = "A2:B2";
+
         public InventaireForm()
         {
             InitializeComponent();
-            OpenExcelFile();
-            ReadExcel();
+            OpenExcelFile("Inventaire_20_12_2021.xlsx", "Print", "A2:B2", dgvInventaire);
+            ReadExcel(dgvInventaire);
             CloseExcelFile();
         }
-        public void OpenExcelFile(/*string fileName, string wsName, string range, DataGridView myDataGrid*/)
+        public void OpenExcelFile(string fileName, string wsName, string range, DataGridView myDataGrid)
         {
             try
             {
                 var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 string localPath = new Uri(outPutDirectory).LocalPath;
                 string[] strSplitPath = localPath.Split(new String[] { "bin" }, StringSplitOptions.None);
-                this.strFilePath = strSplitPath[0] + "Ressources\\Inventaire_20_12_2021.xlsx";
+                this.strFilePath = strSplitPath[0] + "Ressources\\" + fileName;
 
                 //string date = DateTime.Now.ToString("dd_MM_yyyy");
 
                 this.xlApp = new Excel.Application();
                 this.xlWorkbook = xlApp.Workbooks.Open(this.strFilePath); // chemin vers classeur
-                this.xlWorksheet = xlWorkbook.Worksheets["Tshirts"]; // premiere feuille
+                this.xlWorksheet = xlWorkbook.Worksheets[wsName]; // premiere feuille
                                                                        //this.xlRange = xlWorksheet.UsedRange;
                 this.last = xlWorksheet.UsedRange.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
-                this.xlRange = xlWorksheet.get_Range("A2:B2", last);
+                this.xlRange = xlWorksheet.get_Range(range, last);
 
-                dgvInventaire.Columns[0].HeaderText = this.xlWorksheet.Cells[1, 1].Text; // récup texte colonne
-                dgvInventaire.Columns[1].HeaderText = this.xlWorksheet.Cells[1, 2].Text;
+                myDataGrid.ColumnCount = this.xlWorksheet.Columns.Count;
+                for(int i = 0; i < myDataGrid.ColumnCount; i++)
+                {
+                    myDataGrid.Columns[i].HeaderText = this.xlWorksheet.Cells[1,(i+1)].Text; // récup texte colonne
+                }
+                /*
+                myDataGrid.Columns[0].HeaderText = this.xlWorksheet.Cells[1, 1].Text; // récup texte colonne
+                myDataGrid.Columns[1].HeaderText = this.xlWorksheet.Cells[1, 2].Text;
+                */
             }
             catch (Exception ex)
             {
@@ -61,16 +73,25 @@ namespace DinartApp.Forms
                 CloseExcelFile();
             }
         }
-        public void ReadExcel()
+        public void ReadExcel(DataGridView myDataGrid)
         {
+            int colCount = this.xlWorksheet.Columns.Count;
+            
             for (this.xlRow = 1; this.xlRow <= this.xlRange.Rows.Count; this.xlRow++)
             {
                 if (this.xlRange.Cells[xlRow, 1].Text != "")
                 {
-                    dgvInventaire.Rows.Add(
+                    for (int i = 0;i < colCount;i++)
+                    {
+                        myDataGrid.Rows.Add(this.xlRange.Cells[xlRow, colCount].Text);
+                    }
+                    /*
+                    myDataGrid.Rows.Add(
                         this.xlRange.Cells[xlRow, 1].Text,
                         this.xlRange.Cells[xlRow, 2].Text
                     ); // 1 = A, 2 = B, ...
+                    */
+
                     // somme = somme + this.xlRange.Cells[xlRow, 2].Value;
                 }
             }
@@ -80,7 +101,7 @@ namespace DinartApp.Forms
             var ourGrid = (DataGridView)sender;
             if (ourGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                OpenExcelFile(); // peut être retirer plus tard si déplacement CloseExcelFile()
+                OpenExcelFile("Inventaire_20_12_2021.xlsx", "Print", "A2:B2", dgvInventaire); // peut être retirer plus tard si déplacement CloseExcelFile()
                 try
                 {
                     this.xlRange.Cells[e.RowIndex + 1, 1].Value
@@ -103,7 +124,7 @@ namespace DinartApp.Forms
         {
             var ourGrid = (DataGridView)sender;
             
-            OpenExcelFile(); // peut être retirer plus tard si déplacement CloseExcelFile()
+            OpenExcelFile("Inventaire_20_12_2021.xlsx", "Print", "A2:B2", dgvInventaire); // peut être retirer plus tard si déplacement CloseExcelFile()
             try
             {
                 this.xlRange.Rows[e.RowIndex + 1].Delete(); // supprimme ligne excel
