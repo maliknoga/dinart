@@ -34,21 +34,32 @@ namespace DinartApp.Forms
             ReadExcel();
             CloseExcelFile();
         }
-        public void OpenExcelFile()
+        public void OpenExcelFile(/*string fileName, string wsName, string range, DataGridView myDataGrid*/)
         {
-            var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string localPath = new Uri(outPutDirectory).LocalPath;
-            string[] strSplitPath = localPath.Split(new String[] { "bin" }, StringSplitOptions.None);
-            this.strFilePath = strSplitPath[0] + "Ressources\\Inventaire_20_12_2021.xlsx";
+            try
+            {
+                var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string localPath = new Uri(outPutDirectory).LocalPath;
+                string[] strSplitPath = localPath.Split(new String[] { "bin" }, StringSplitOptions.None);
+                this.strFilePath = strSplitPath[0] + "Ressources\\Inventaire_20_12_2021.xlsx";
 
-            //string date = DateTime.Now.ToString("dd_MM_yyyy");
+                //string date = DateTime.Now.ToString("dd_MM_yyyy");
 
-            this.xlApp = new Excel.Application();
-            this.xlWorkbook = xlApp.Workbooks.Open(this.strFilePath); // chemin vers classeur
-            this.xlWorksheet = xlWorkbook.Worksheets[1]; // premiere feuille
-            //this.xlRange = xlWorksheet.UsedRange;
-            this.last = xlWorksheet.UsedRange.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
-            this.xlRange = xlWorksheet.get_Range("A2:B2", last);
+                this.xlApp = new Excel.Application();
+                this.xlWorkbook = xlApp.Workbooks.Open(this.strFilePath); // chemin vers classeur
+                this.xlWorksheet = xlWorkbook.Worksheets["Tshirts"]; // premiere feuille
+                                                                       //this.xlRange = xlWorksheet.UsedRange;
+                this.last = xlWorksheet.UsedRange.SpecialCells(Excel.XlCellType.xlCellTypeLastCell);
+                this.xlRange = xlWorksheet.get_Range("A2:B2", last);
+
+                dgvInventaire.Columns[0].HeaderText = this.xlWorksheet.Cells[1, 1].Text; // récup texte colonne
+                dgvInventaire.Columns[1].HeaderText = this.xlWorksheet.Cells[1, 2].Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                CloseExcelFile();
+            }
         }
         public void ReadExcel()
         {
@@ -64,7 +75,7 @@ namespace DinartApp.Forms
                 }
             }
         }
-        private void dgvInventaire_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvInventaire_CellContentSave(object sender, DataGridViewCellEventArgs e)
         {
             var ourGrid = (DataGridView)sender;
             if (ourGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
